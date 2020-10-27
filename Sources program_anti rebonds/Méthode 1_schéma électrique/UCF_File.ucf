@@ -1,0 +1,47 @@
+#///////////////////////////////////////////////////////////////////////////	
+
+##Clock signal
+#Net "clock_100Mhz" LOC=V10 | IOSTANDARD=LVCMOS33;
+#Net "clock_100Mhz" TNM_NET = sys_clk_pin;
+#TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100000 kHz;
+
+### 7 segment display
+#Net "LED_out<0>" LOC = T17; #| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L51P_M1DQ12, Sch name = CA
+#Net "LED_out<1>" LOC = T18 ;#| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L51N_M1DQ13, Sch name = CB
+#Net "LED_out<2>" LOC = U17 ;#| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L52P_M1DQ14, Sch name = CC
+#Net "LED_out<3>" LOC = U18 ;#| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L52N_M1DQ15, Sch name = CD
+#Net "LED_out<4>" LOC = M14 ;#| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L53P, Sch name = CE
+#Net "LED_out<5>" LOC = N14 ;#| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L53N_VREF, Sch name = CF
+#Net "LED_out<6>" LOC = L14 ;#| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L61P, Sch name = CG
+##Net "LED_out<7>" LOC = M13 ;#| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L61N, Sch name = DP
+#
+#Net "Anode_Activate<0>" LOC = N16;# | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L50N_M1UDQSN, Sch name = AN0
+#Net "Anode_Activate<1>" LOC = N15; #| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L50P_M1UDQS, Sch name = AN1
+#Net "Anode_Activate<2>" LOC = P18; #| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L49N_M1DQ11, Sch name = AN2
+#Net "Anode_Activate<3>" LOC = P17; #| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L49P_M1DQ10, Sch name = AN3
+
+
+## Switches
+#Net "reset" LOC = T10; 
+
+###### (variable pour l'ancien programme d'historique):
+##Pin in   /   T12 --> Pmod
+#Net "A" LOC = T12;
+
+######################
+##switch             /         Pmod
+#NET "A<0>"          LOC = "T12";
+#NET "A<1>"          LOC = "V12";
+#NET "A<2>"          LOC = "N10" ;
+#NET "A<3>"          LOC = "P11" ;
+
+###switch             /         scitches
+#Net "reset" 				LOC = T10;
+#NET "choix<0>"          LOC = T9;
+#NET "choix<1>"          LOC = V9;
+#NET "choix<2>"          LOC = M8;
+#NET "choix<3>"          LOC = N8 ;
+#NET "choix<4>"          LOC = U8 ;
+
+### boutons:
+NET "Din"          LOC = A8;
